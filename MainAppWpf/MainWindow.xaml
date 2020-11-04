@@ -1,0 +1,23 @@
+﻿<Window x:Class="MainAppWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MainAppWpf"
+        mc:Ignorable="d"
+        Title="Paint" Height="400" Width="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0" Height="20" VerticalAlignment="Top">
+            <MenuItem Header="Open Image" Name="openImage" Click="OpenImage_OnClick"/>
+            <MenuItem Header="Filters" Name="filters" />
+            <MenuItem Header="Help" Name="help" Click="Help_OnClick" />
+        </Menu>
+
+        <Image Grid.Row="1" Stretch="Fill" Name="pictureBox" />
+    </Grid>
+</Window>
