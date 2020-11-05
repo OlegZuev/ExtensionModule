@@ -20,7 +20,7 @@
 
 
         <Slider Name="sliderMatrixDim" Margin="5" Value="3" IsSnapToTickEnabled="True" TickPlacement="BottomRight"
-                TickFrequency="2" Minimum="3" Maximum="30" />
+                TickFrequency="2" Minimum="3" Maximum="29" />
 
         <Button Content="Применить" Margin="60 5" Click="ButtonBase_OnClick"/>
     </StackPanel>

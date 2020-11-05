@@ -92,7 +92,7 @@ namespace MatrixBlurFilter {
             sourceColors = CreateExtendedBitmap(sourceColors, halfDim);
 
             var distColors = new Color[source.Width, source.Height];
-            int maxThread = 8; // Максимальное количество потоков
+            int maxThread = Environment.ProcessorCount; // Максимальное количество потоков
             // Массив запущенных потоков
             var threads = new Thread[maxThread];
             int i = halfDim;

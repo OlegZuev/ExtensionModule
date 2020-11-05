@@ -25,7 +25,11 @@ namespace MainAppWpf {
 
         private void InitializeListOfPlugins(Dictionary<string, IPlugin> plugins) {
             foreach (var plugin in plugins) {
-                var attrs = plugin.Value.GetType().GetCustomAttributes(false);
+                var attrs = plugin.Value.GetType().GetCustomAttributes(typeof(VersionAttribute), false);
+                if (attrs.Length < 1 ) {
+                    continue;
+                }
+
                 foreach (VersionAttribute attr in attrs) {
                     listOfPlugins.Items.Add(new ListViewItem {
                         Content =
